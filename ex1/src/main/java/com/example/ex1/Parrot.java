@@ -4,15 +4,13 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Component;
 
-//@Component
 public class Parrot {
 	
-	private String name;
+	public Parrot() {
+		System.out.println("parrot created");
+	}
 	
-//	@PostConstruct
-//	public void init() {
-//		this.name = "Koko";
-//	}
+	private String name;
 	
 	public String getName() {
 		return name;
@@ -20,5 +18,10 @@ public class Parrot {
 	
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Parrot : " + this.name;
 	}
 }
