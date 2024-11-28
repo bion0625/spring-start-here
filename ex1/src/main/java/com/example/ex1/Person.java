@@ -5,14 +5,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-	final private String name = "Ella";
+	private String name = "Ella";
 	
-	final private Parrot parrot;
-	
-	@Autowired
-	public Person(Parrot parrot) {
-		this.parrot = parrot;
-	}
+	private Parrot parrot;
 	
 	public String getName() {
 		return name;
@@ -20,5 +15,14 @@ public class Person {
 	
 	public Parrot getParrot() {
 		return parrot;
+	}
+	
+	@Autowired
+	public void setParrot(Parrot parrot) {
+		this.parrot = parrot;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 }
