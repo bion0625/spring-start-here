@@ -1,16 +1,11 @@
 package com.example.ex1;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.stereotype.Component;
 
+@Component
 public class Parrot {
 	
-	public Parrot() {
-		System.out.println("parrot created");
-	}
-	
-	private String name;
+	private String name = "Koko";
 	
 	public String getName() {
 		return name;
