@@ -1,25 +1,19 @@
 package com.example.ex1;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
 public class Parrot {
 	
-	private final String name = "Koko";
-	private final Person person;
+	private String name;
 	
-	@Autowired
-	public Parrot(Person person) {
-		this.person = person;
+	Parrot() {
+		System.out.println("Parrot created");
 	}
-	
+		
 	public String getName() {
 		return name;
 	}
 	
-	public Person getPerson() {
-		return person;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	@Override
